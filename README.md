@@ -5,31 +5,31 @@ Questo script serve a scaricare ed installare i pacchetti di sistema, i sorgenti
 
 # DIPENDENZE SOFTWARE:
 
-# mc 
+## mc 
 File system manager a riga di comando.
 
-# red, ed & jed
+## red, ed & jed
 Editors di testo da terminale.
 
-# byobu
+## byobu
 Funzioni shell avanzate.
 
-# pulseaudio -- jackd
+## pulseaudio -- jackd
 Server audio.
 
-# sonic-pi
+## sonic-pi
 Ruby IDE per il synth di SuperCollider.
 
-# supercollider 
+## supercollider 
 Linguaggio di programmazione in tempo reale.
 
-# sc3-plugins 
+## sc3-plugins 
 Plug-in per SuperCollider.
 
-# aubio & osmid
+## aubio & osmid
 Altri plug-in per SuperCollider.
 
-# Pacchetti GNU-Linux 
+## Pacchetti GNU-Linux 
 g++ ruby ruby-dev pkg-config git build-essential libjack-jackd2-dev libsndfile1-dev libasound2-dev libavahi-client-dev libicu-dev libreadline6-dev libfftw3-dev libxt-dev libudev-dev cmake libboost-dev libqwt-qt5-dev libqt5scintilla2-dev libqt5svg5-dev qt5-qmake qt5-default qttools5-dev qttools5-dev-tools qtdeclarative5-dev libqt5webkit5-dev qtpositioning5-dev libqt5sensors5-dev qtmultimedia5-dev libffi-dev curl python erlang-base
 
 
