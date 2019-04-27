@@ -80,7 +80,7 @@
  
 ## Su sistemi ubuntu 18.04 LTS è sufficiente decommentare i seguenti comandi e commentare tutti i precedenti:
 
-cd
+cd 
 sudo apt update; sudo apt full-upgrade
 install mc gem jed curl sonic-pi
 curl https://sh.rustup.rs -sSf | sh
@@ -88,7 +88,4 @@ cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
 sudo gem install rugged
 sudo git clone https://github.com/samaaron/sonic-pi
-cd ~HOME/sonic-pi/app/gui/qt/
-sudo chmod +777 build-ubuntu-18-04
-./build-ubuntu-18-04
-cd
+
