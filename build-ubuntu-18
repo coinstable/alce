@@ -1,8 +1,8 @@
 #!/bin/sh
 
-___________________________________________________________________________________________#
+#__________________________________________________________________________________________#
 #                                                                                          #
-# ** ALCE (Audio Live Coding Envirorment) **                                               # 
+# ** ALCE (Audio Live Coding Envirorment) **                                               #
 # Questo script serve a scaricare ed installare i pacchetti di sistema,                    #
 # i sorgenti software e le dipendenze necessarie al sistema per configurare                #
 # l'ambiente di sviluppo audio interattivo 'ALCE' per shell/bash                           #
