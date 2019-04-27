@@ -1,19 +1,27 @@
 #!/bin/sh
- 
-##| '" ALCE (Audio Live Coding Envirorment) "'
-## Questo script serve a scaricare ed installare i pacchetti di sistema, i sorgenti software e le dipendenze necessarie al sistema per configurare l'ambiente di sviluppo audio interattivo 'ALCE' per shell/bash che utilizza software open source quali: Jackd come demone audio, l'editor a linea di comando Jed, gli ambienti di sviluppo integrati sonic-pi e supercollider per la sintesi audio, Rust e Ruby per il controllo dei dati.
-# Nestore Locarno. Donazioni Bitcoin: 3NWbGmuLo7uoA8tiZG329X3i2W4d65oUUK
-#@>> Snippet Repository:
-#@ Ghostbin idx: 98z4d
-#@ Pastebin.com idx: DAUgW8xx
-#@ PasteFs.com idx: pid/114820
-#@ Paste.Ubuntu.com idx: p/h8cZxYTjy7
-#@ CodePad.org idx: Ly9gYWKC 
-#@ TagMyCode.com idx: snippet/12170/alce
-#@ Cacher.io idx: snippet/fd7af875c04233183321
-#@ Paste4BTC.com idx: FDJECUaW
 
-#INSTALLAZIONE DIPENDENZE
+___________________________________________________________________________________________#
+#                                                                                          #
+# ** ALCE (Audio Live Coding Envirorment) **                                               # 
+# Questo script serve a scaricare ed installare i pacchetti di sistema,                    #
+# i sorgenti software e le dipendenze necessarie al sistema per configurare                #
+# l'ambiente di sviluppo audio interattivo 'ALCE' per shell/bash                           #
+# che utilizza software open source quali: Jackd come demone audio,                        #
+# l'editor a linea di comando Jed,                                                         #
+# gli ambienti di sviluppo integrati sonic-pi e supercollider per la sintesi audio,        #
+# Rust e Ruby per il controllo dei dati.                                                   #
+# Nestore Locarno. Donazioni Bitcoin: 3NWbGmuLo7uoA8tiZG329X3i2W4d65oUUK                   #
+# >> Snippet Repository:                                                                   #
+# Ghostbin idx: 98z4d                                                                      #
+# Pastebin.com idx: DAUgW8xx                                                               #
+# PasteFs.com idx: pid/114820                                                              #
+# Paste.Ubuntu.com idx: p/h8cZxYTjy7                                                       #
+# CodePad.org idx: Ly9gYWKC                                                                #
+# TagMyCode.com idx: snippet/12170/alce                                                    #
+# Cacher.io idx: snippet/fd7af875c04233183321                                              #
+# Paste4BTC.com idx: FDJECUaW                                                              #
+#                                                                                          #
+#__________________________________________________________________________________________#
 
 cd $HOME/
 sudo apt update; sudo apt full-upgrade
@@ -25,4 +33,15 @@ cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
 sudo gem install rugged
 sudo git clone https://github.com/samaaron/sonic-pi
+sudo mv $HOME/alce/buffer.rb $HOME/sonic-pi/
+cd $HOME/sonic-pi
+echo "pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-server & sleep 2; jed buffer.rb" > $HOME/sonic-pi/start-alce
+sudo chmod +777 $HOME/sonic-pi/start-alce
+echo "sonic-pi-tool logs" > $HOME/sonic-pi/alce-log
+sudo chmod +777 $HOME/sonic-pi/alce-log
+echo "cat buffer.rb | sonic_pi" > $HOME/sonic-pi/!P
+sudo chmod +777 $HOME/sonic-pi/!P
+echo "sonic_pi stop" > $HOME/sonic-pi/!S
+sudo chmod +777 $HOME/sonic-pi/!S
+
 
