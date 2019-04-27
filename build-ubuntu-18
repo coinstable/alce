@@ -33,15 +33,13 @@ cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
 sudo gem install rugged
 sudo git clone https://github.com/samaaron/sonic-pi
-sudo mv $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb
-cd $HOME/sonic-pi
-echo "cd $HOME/sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-server & sleep 2; jed buffer.rb" > $HOME/start-alce
-sudo chmod +x $HOME/start-alce
-echo "sonic-pi-tool logs" > $HOME/sonic-pi/alce-log
-sudo chmod +x $HOME/sonic-pi/alce-log
-echo "cat buffer.rb | sonic_pi" > $HOME/sonic-pi/P!
-sudo chmod +x $HOME/sonic-pi/P!
-echo "sonic_pi stop" > $HOME/sonic-pi/S!
-sudo chmod +x $HOME/sonic-pi/S!
-
-
+sudo cp $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb
+echo "cd $HOME/sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-server & sleep 2; jed buffer.rb" > start-alce
+sudo chmod +x start-alce
+sudo chmod +777 sonic-pi/
+echo "sonic-pi-tool logs" > sonic-pi/alce-log
+sudo chmod +x sonic-pi/alce-log
+echo "cat buffer.rb | sonic_pi" > sonic-pi/P
+sudo chmod +x sonic-pi/P
+echo "sonic_pi stop" > sonic-pi/S
+sudo chmod +x sonic-pi/S
