@@ -1,0 +1,14 @@
+#!/bin/sh
+
+pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2
+sonic-pi-tool start-server & sleep 2
+jed buffer.rb
+
+
+
+
+
+
+
+
+
