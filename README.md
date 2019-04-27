@@ -20,7 +20,8 @@ $   ./$HOME/alce/build-ubuntu-18
 ### AVVIO:
 
 1. Eseguire il Boot del server audio
-$ ./start-alce
+
+$   ./start-alce
 
 #### DIPENDENZE SOFTWARE:
 
