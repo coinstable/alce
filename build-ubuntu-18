@@ -79,8 +79,10 @@
 ##| Ubuntu 18.04 LTS Packages:
  
 ## Su sistemi ubuntu 18.04 LTS è sufficiente decommentare i seguenti comandi e commentare tutti i precedenti:
- 
-sudo apt install mc gem jed curl sonic-pi
+
+cd
+sudo apt update; sudo apt full-upgrade
+install mc gem jed curl sonic-pi
 curl https://sh.rustup.rs -sSf | sh
 cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
