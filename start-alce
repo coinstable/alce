@@ -1,8 +1,11 @@
 #!/bin/sh
+# Questo file è parte del progetto Alce.
 
+# avvio server audio jackd in modalità multi-utente
 pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2
+# avvia sonic-pi server
 sonic-pi-tool start-server & sleep 2
-jed buffer.rb
+jed buffer.rb # editor di testo Jed
 
 
 
