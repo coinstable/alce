@@ -1,0 +1,3 @@
+#!/bin/sh
+# debug post window
+sonic-pi-tool logs
