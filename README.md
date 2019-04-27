@@ -6,12 +6,15 @@ Questa serie di script hanno lo scopo di scaricare, organizzare ed installare i 
 ### INSTALLAZIONE:
 
 1. Clonare il repositorio da github
+
 $ git clone https://github.com/coinstable/alce.git 
 
 2. Attivare i premessi di esecuzione allo script principale
+
 $ sudo chmod +x $HOME/alce/build-ubuntu-18
 
 3. Eseguire lo script principale
+
 $ ./$HOME/alce/build-ubuntu-18
 
 ### AVVIO:
