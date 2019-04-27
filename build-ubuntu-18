@@ -13,12 +13,14 @@
 #@ Cacher.io idx: snippet/fd7af875c04233183321
 #@ Paste4BTC.com idx: FDJECUaW
 
-#DIPENDENZE
+#INSTALLAZIONE DIPENDENZE
 
-cd; sudo apt update; sudo apt full-upgrade
+cd $HOME/
+sudo apt update; sudo apt full-upgrade
 install -y build-essential software-properties-common
 sudo apt install -y mc gem jed w3m git curl byobu sonic-pi
 curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
 cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
 sudo gem install rugged
