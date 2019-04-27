@@ -23,6 +23,10 @@ $   ./$HOME/alce/build-ubuntu-18
 
 $   ./start-alce
 
+### COMANDI AMBIENTE:
+
+
+
 #### DIPENDENZE SOFTWARE:
 
 ##### mc 
