@@ -39,9 +39,9 @@ echo "pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-s
 sudo chmod +777 $HOME/sonic-pi/start-alce
 echo "sonic-pi-tool logs" > $HOME/sonic-pi/alce-log
 sudo chmod +777 $HOME/sonic-pi/alce-log
-echo "cat buffer.rb | sonic_pi" > $HOME/sonic-pi/!P
-sudo chmod +777 $HOME/sonic-pi/!P
-echo "sonic_pi stop" > $HOME/sonic-pi/!S
-sudo chmod +777 $HOME/sonic-pi/!S
+echo "cat buffer.rb | sonic_pi" > $HOME/sonic-pi/P!
+sudo chmod +777 $HOME/sonic-pi/P!
+echo "sonic_pi stop" > $HOME/sonic-pi/S!
+sudo chmod +777 $HOME/sonic-pi/S!
 
 
