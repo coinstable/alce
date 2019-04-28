@@ -43,3 +43,8 @@ echo "cat buffer.rb | sonic_pi" > sonic-pi/P
 sudo chmod +x sonic-pi/P
 echo "sonic_pi stop" > sonic-pi/S
 sudo chmod +x sonic-pi/S
+sudo chmod +777 sonic-pi/buffer.rb
+echo "Installazione di ALCE eseguita...Ricalcolo" & sleep 1
+echo "......" & sleep 4
+echo "Necessario riavvio del sistema...Attendere" & sleep 5
+sudo reboot
