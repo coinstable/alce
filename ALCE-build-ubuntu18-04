@@ -1,0 +1,35 @@
+echo "Installazione pacchetti sistema base..."
+sudo apt install -y git build-essential buildapp software-properties-common
+echo "Installazione moduli audio..."
+sudo apt install -y jack pulseaudo pulseaudio-module-jack
+echo "Installazione componenti software base..."
+sudo apt install -y mc gem jed curl
+echo "Installazione server audio e synth..."
+sudo apt install -y sonic-pi
+echo "Installazione dipendenze completata!"
+echo "Chiusura processi in corso..."
+echo "ATTENZIONE!! Necessario riavvio del sistema!" 
+echo "Salvataggio progeressi installazione in corso..."
+echo "sudo gem install sonic-pi-cli" > resume.setup
+echo "curl https://sh.rustup.rs -sSf | sh" >> resume.setup
+echo "source $HOME/.cargo/env" >> resume.setup
+echo "cargo install --git https://github.com/lpil/sonic-pi-tool/ --force" >> resume.setup
+echo 'echo "Creazione file di configurazione e avvio in corso..."' >> resume.setup
+echo 'echo "sudo git clone https://github.com/samaaron/sonic-pi"' >> resume.setup
+echo 'sudo cp $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb' >> resume.setup
+echo 'echo "cd sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2" > start-alce' >> resume.setup 
+echo 'echo "sonic-pi-tool start-server & sleep 2; jed buffer.rb" >> start-alce' >> resume.setup
+echo 'sudo chmod +x start-alce' >> resume.setup
+echo 'sudo chmod +777 sonic-pi/' >> resume.setup
+echo 'echo "sonic-pi-tool logs" > sonic-pi/alce-log' >> resume.setup
+echo 'sudo chmod +x sonic-pi/alce-log' >> resume.setup 
+echo 'echo "cat buffer.rb | sonic_pi" > sonic-pi/P' >> resume.setup
+echo 'sudo chmod +x sonic-pi/P' >> resume.setup
+echo 'echo "sonic_pi stop" > sonic-pi/S' >> resume.setup
+echo 'sudo chmod +x sonic-pi/S' >> resume.setup
+echo 'sudo chmod +777 sonic-pi/buffer.rb' >> resume.setup
+echo 'sudo chmod +x resume.setup' >> resume.setup
+echo "RIAVVIO DEL SISTEMA IMPOSTATO! 10 secondi.
+echo "A riavvio completato digitare il comando './resume.setup'" & sleep 10
+reboot
+
