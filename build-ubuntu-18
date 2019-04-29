@@ -39,7 +39,8 @@ sudo gem install rugged
 sudo git clone https://github.com/samaaron/sonic-pi
 echo "Creazione file di configurazione e avvio in corso..."
 sudo cp $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb
-echo "cd $HOME/sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-server & sleep 2; jed buffer.rb" > start-alce
+echo "cd sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2" > start-alce 
+echo "sonic-pi-tool start-server & sleep 2; jed buffer.rb" >> start-alce
 sudo chmod +x start-alce
 sudo chmod +777 sonic-pi/
 echo "sonic-pi-tool logs" > sonic-pi/alce-log
