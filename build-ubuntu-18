@@ -41,7 +41,7 @@ echo "curl https://sh.rustup.rs -sSf | sh" >> resume.setup
 echo "source $HOME/.cargo/env" >> resume.setup
 echo "cargo install --git https://github.com/lpil/sonic-pi-tool/ --force" >> resume.setup
 echo 'echo "Creazione file di configurazione e avvio in corso..."' >> resume.setup
-echo 'echo "sudo git clone https://github.com/samaaron/sonic-pi"' >> resume.setup
+echo "sudo git clone https://github.com/samaaron/sonic-pi" >> resume.setup
 echo 'sudo cp $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb' >> resume.setup
 echo 'echo "cd sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2" > start-alce' >> resume.setup 
 echo 'echo "sonic-pi-tool start-server & sleep 2; jed buffer.rb" >> start-alce' >> resume.setup
