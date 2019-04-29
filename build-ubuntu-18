@@ -54,7 +54,7 @@ echo 'sudo chmod +x sonic-pi/P' >> resume.setup
 echo 'echo "sonic_pi stop" > sonic-pi/S' >> resume.setup
 echo 'sudo chmod +x sonic-pi/S' >> resume.setup
 echo 'sudo chmod +777 sonic-pi/buffer.rb' >> resume.setup
-echo 'sudo chmod +x resume.setup' >> resume.setup
+sudo chmod +x resume.setup
 echo "RIAVVIO DEL SISTEMA IMPOSTATO! 10 secondi."
 echo "A riavvio completato digitare il comando './resume.setup'" & sleep 10
 reboot
