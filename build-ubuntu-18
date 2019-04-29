@@ -23,6 +23,7 @@
 #                                                                                          #
 #__________________________________________________________________________________________#
 
+#SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd; echo "Preparazione all'installazione di ALCE in corso..." & sleep 3
 echo "Installazione ALCE in corso" & sleep 2
 sudo apt update; sudo apt full-upgrade
