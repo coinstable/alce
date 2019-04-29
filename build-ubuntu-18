@@ -29,12 +29,15 @@ sudo apt update; sudo apt full-upgrade
 install -y build-essential software-properties-common
 sudo apt install -y mc gem jed w3m curl sonic-pi
 sudo apt install -y pulseaudio pulseaudio-module-jack
+echo "Scaricamento e installazione dipendenze completata!"
+echo "Compilazione componenti software in corso..." & sleep 2
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 cargo install --git https://github.com/lpil/sonic-pi-tool/ --force
 sudo gem install sonic-pi-cli
 sudo gem install rugged
 sudo git clone https://github.com/samaaron/sonic-pi
+echo "Creazione file di configurazione e avvio in corso..."
 sudo cp $HOME/alce/buffer0.rb $HOME/sonic-pi/buffer.rb
 echo "cd $HOME/sonic-pi; pasuspender -- jackd -r -d alsa -d hw:0,0 & sleep 2; sonic-pi-tool start-server & sleep 2; jed buffer.rb" > start-alce
 sudo chmod +x start-alce
